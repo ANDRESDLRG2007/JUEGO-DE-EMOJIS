@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Encuentra el Emoji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="menu-bg">
+    <div class="menu-container">
+        <h1 class="titulo">🎯 Encuentra el Emoji 🎯</h1>
+        <p class="subtitulo">¡Pon a prueba tu velocidad y precisión!</p>
+
+        <div class="leyenda">
+            <p>😀 😄 😁 → <span class="bueno">+1 punto</span> y <span class="bueno">+5s</span></p>
+            <p>😈 💣 → <span class="malo">-10s</span> y pantalla tiembla</p>
+            <p>Si dejas pasar un emoji bueno → <span class="malo">-1 punto</span></p>
+        </div>
+
+        <label for="dificultad" class="label-dif">Selecciona dificultad:</label>
+        <select id="dificultad" class="select-dif">
+            <option value="facil">Fácil</option>
+            <option value="medio" selected>Medio</option>
+            <option value="dificil">Difícil</option>
+            <option value="demon">Demon 😈</option>
+        </select>
+
+        <div class="info-dificultad">
+            <h3>📊 Diferencias entre dificultades</h3>
+            <p><b>Fácil:</b> Velocidad lenta, +80% emojis buenos, penalización baja.</p>
+            <p><b>Medio:</b> Velocidad media, +70% emojis buenos, penalización media.</p>
+            <p><b>Difícil:</b> Velocidad rápida, +60% emojis buenos, penalización alta.</p>
+            <p><b>Demon 😈:</b> Velocidad muy rápida, tamaño de emojis reduce con el tiempo, aparecen varios a la vez y la proporción de emojis malos aumenta.</p>
+        </div>
+
+        <br>
+        <button class="btn" onclick="iniciarJuego()">🚀 Jugar</button>
+    </div>
+
+    <script>
+        function iniciarJuego() {
+            const dificultad = document.getElementById("dificultad").value;
+            localStorage.setItem("dificultadEmoji", dificultad);
+            window.location.href = "juego.html";
+        }
+    </script>
+</body>
+</html>

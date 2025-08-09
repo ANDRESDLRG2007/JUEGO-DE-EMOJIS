@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - Encuentra el Emoji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="menu-bg">
+    <div class="menu-container game-container">
+        <header>
+            <a href="index.html" class="btn">Volver al Menú</a>
+            <h2>Puntuación: <span id="score">0</span></h2>
+            <h2>Tiempo: <span id="time">30</span>s</h2>
+        </header>
+
+        <div class="leyenda-juego">
+            <small>
+                😀 😄 😁 → <span class="bueno">+1 punto</span> y <span class="bueno">+5s</span> |
+                😈 💣 → <span class="malo">-10s</span> y pantalla tiembla |
+                Saltar emoji bueno → <span class="malo">-1 punto</span>
+            </small>
+        </div>
+
+        <div id="emoji-area"></div>
+
+        <div id="game-over" style="display:none;">
+            <h2 style="color:red;">¡Game Over!</h2>
+            <button class="btn" onclick="location.reload()">Volver a Intentar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
